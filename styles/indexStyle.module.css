@@ -1,0 +1,19 @@
+nav {
+    background-color: aqua;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    color: coral;
+}
+
+a:hover {
+    color: yellowgreen;
+}
+
+.footerCaption {
+    color: blueviolet;
+}

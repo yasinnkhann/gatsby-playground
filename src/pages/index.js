@@ -1,29 +1,34 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { Fragment } from 'react';
+import { Link } from "gatsby";
+import * as indexStyle from '../../styles/indexStyle.module.css';
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+const IndexPage = () => {
+  return (
+  <Fragment>
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
-  </Layout>
-)
+    <header>
+      <nav>
+        <a href="#">My Portfolio</a>
+        {" "}
+        <a href="#">Contact Me</a> 
+        {" "}
+        <a href="#">About Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <p>
+        Eiusmod ut culpa ullamco elit qui in cillum in. Sit aliquip id aliquip occaecat officia aute pariatur occaecat proident dolor labore irure non. Pariatur do cillum ut aliquip do ea reprehenderit sit dolore dolor ea proident commodo. In ullamco proident cillum ipsum officia.
+      </p>
+      <span>Lets go to <Link to="/page2">Page 2</Link>!</span>
+    </main>
+
+    <footer>
+      <div className={indexStyle.footerCaption}>Anim tempor consectetur proident in proident esse.</div>
+    </footer>
+
+  </Fragment>
+  );
+}
 
 export default IndexPage
