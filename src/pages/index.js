@@ -1,16 +1,19 @@
 import React, { Fragment } from 'react';
 import { Link } from "gatsby";
 import * as indexStyle from '../../styles/indexStyle.module.css';
+import Layout from '../components/layout';
+import { StaticImage } from 'gatsby-plugin-image';
+
 
 const IndexPage = () => {
   return (
   <Fragment>
 
-    <header>
+    {/* <header>
       <nav>
         <a href="#">My Portfolio</a>
         <a href="#">Contact Me</a> 
-        <a href="#">About Me</a>
+        <Link to="/about">About</Link>!
       </nav>
     </header>
 
@@ -23,7 +26,15 @@ const IndexPage = () => {
 
     <footer>
       <div className={indexStyle.footerCaption}>Anim tempor consectetur proident in proident esse.</div>
-    </footer>
+    </footer> */}
+
+    <Layout pageTitle="Home Page">
+      <p>I'm making this by following the Gatsby Tutorial.</p>
+       <StaticImage
+        alt="Gatsby Logo"
+        src="../images/gatsby-icon.png"
+      />
+    </Layout>
 
   </Fragment>
   );
