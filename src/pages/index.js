@@ -9,9 +9,7 @@ const IndexPage = () => {
     <header>
       <nav>
         <a href="#">My Portfolio</a>
-        {" "}
         <a href="#">Contact Me</a> 
-        {" "}
         <a href="#">About Me</a>
       </nav>
     </header>
