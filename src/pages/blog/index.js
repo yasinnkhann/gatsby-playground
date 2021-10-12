@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../../components/layout';
 
 export default function blog({ data }) {
     return (
-        <div>
+        <Fragment>
              <Layout pageTitle="My Blog Posts">
               {
                 data.allMdx.nodes.map(node => (
@@ -19,8 +19,8 @@ export default function blog({ data }) {
                 ))
               }
              </Layout>
-        </div>
-    )
+        </Fragment>
+    );
 };
 
 export const query = graphql`

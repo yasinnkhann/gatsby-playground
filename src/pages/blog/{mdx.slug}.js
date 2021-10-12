@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -8,7 +8,7 @@ export default function post({ data }) {
     const image = getImage(data.mdx.frontmatter.hero_image);
 
     return (
-        <div>
+        <Fragment>
             <Layout pageTitle={data.mdx.frontmatter.title}>
                 <p>{data.mdx.frontmatter.date}</p>
                 <GatsbyImage
@@ -17,7 +17,9 @@ export default function post({ data }) {
                 />
                 <p>
                     Photo Credit:{" "}
-                    <a href={data.mdx.frontmatter.hero_image_credit_link}>
+                    <a href={data.mdx.frontmatter.hero_image_credit_link}
+                       target="_blank"
+                       >
                         {data.mdx.frontmatter.hero_image_credit_text}
                     </a>
                 </p>
@@ -25,8 +27,8 @@ export default function post({ data }) {
                     {data.mdx.body}
                 </MDXRenderer>
             </Layout>
-        </div>
-    )
+        </Fragment>
+    );
 };
 
 export const query = graphql`

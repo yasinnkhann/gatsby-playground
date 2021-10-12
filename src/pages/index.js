@@ -14,6 +14,6 @@ const IndexPage = () => {
     </Layout>
   </Fragment>
   );
-}
+};
 
 export default IndexPage;
