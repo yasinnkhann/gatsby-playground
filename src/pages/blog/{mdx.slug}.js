@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Layout from '../../components/layout';
 
 export default function post({ data }) {

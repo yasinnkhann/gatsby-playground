@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import Layout from '../../components/layout';
 
 export default function blog({ data }) {
@@ -22,7 +21,7 @@ export default function blog({ data }) {
              </Layout>
         </div>
     )
-}
+};
 
 export const query = graphql`
   query {
